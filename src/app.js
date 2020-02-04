@@ -2,10 +2,13 @@ import React, { useState } from 'react';
 
 import Game from './containers/game';
 
+import './styles/normalize.css';
+import './styles/skeleton.css';
+
 const App = () => {
   const [gridSize, setGridSize] = useState({
-    width: '',
     height: '',
+    width: '',
   });
   const [gridNotSet, setGridNotSet] = useState(false);
   const [gameOn, setGameOn] = useState(false);
