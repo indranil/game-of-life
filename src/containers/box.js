@@ -7,9 +7,11 @@ const css = {
     width: '10px',
     margin: 0,
     padding: 0,
+    border: '1px solid white',
+    borderColor: 'white',
   },
   containerDesignPhase: {
-    border: '1px solid black',
+    borderColor: '#ccc',
   }
 };
 
@@ -27,7 +29,7 @@ const Box = ({
         ...(designPhase && css.containerDesignPhase),
         ...(value && {backgroundColor: 'black'}),
       }}
-      onClick={() => populateBox(row, col, !value)}
+      onClick={() => designPhase && populateBox(row, col, !value)}
     />
   );
 };

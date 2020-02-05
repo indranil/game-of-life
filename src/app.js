@@ -46,16 +46,16 @@ const App = () => {
         <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank">Conway's Game of Life</a>
       </p>
       {gameOn ? (
-        <>
+        <div className="row">
           <Game gridSize={gridSize} />
           <p>
             <button onClick={resetGame}>
               Reset Game
             </button>
           </p>
-        </>
+        </div>
       ) : (
-        <div>
+        <div className="row">
           <p>Enter grid size</p>
           {gridNotSet && (
             <p className="error">Please set the grid dimensions before continuing.</p>
